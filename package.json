@@ -1,0 +1,71 @@
+{
+  "name": "@ngekoding/enum",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Utility library for working with enumerated types (enums)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Nur Muhammad",
+    "url": "https://ngekoding.github.io",
+    "email": "blog.nurmuhammad@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ngekoding/enum#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngekoding/enum"
+  },
+  "bugs": {
+    "url": "https://github.com/ngekoding/enum/issues"
+  },
+  "keywords": [
+    "enum",
+    "enumeration",
+    "typescript",
+    "javascript"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp && npm publish",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.4",
+    "@types/node": "^18.16.16",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.41.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
+    "vite": "^4.3.9"
+  }
+}
