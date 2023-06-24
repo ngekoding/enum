@@ -1,7 +1,7 @@
 {
   "name": "@ngekoding/enum",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Utility library for working with enumerated types (enums)",
   "publishConfig": {
     "access": "public"
